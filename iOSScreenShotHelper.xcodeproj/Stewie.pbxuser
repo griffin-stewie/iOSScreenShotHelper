@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = E31A87FF10EC659F00B496F7 /* Executable */;
+		activeTarget = 8D5B49AC048680CD000E48DA /* iOSScreenShotHelper */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* iOSScreenShotHelper */,
+		);
+		breakpoints = (
+			E35EFC3C139BBF21008D5C6B /* iOSScreenShotHelperLoader.m:15 */,
+			E35EFC79139BC2F6008D5C6B /* iOSScreenShotHelperLoader.m:25 */,
+			E35EFCAE139BC4E2008D5C6B /* iOSScreenShotHelperLoader.m:34 */,
+		);
+		codeSenseManager = E31A87CB10EC5A5400B496F7 /* Code sense */;
+		executables = (
+			E31A87FF10EC659F00B496F7 /* Executable */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					532,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					604,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					565,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 328977473;
+			PBXWorkspaceStateSaveDate = 328977473;
+		};
+		perUserProjectItems = {
+			E35EFC7D139BC2FD008D5C6B /* PBXTextBookmark */ = E35EFC7D139BC2FD008D5C6B /* PBXTextBookmark */;
+			E35EFCDC139BC9B2008D5C6B /* PBXTextBookmark */ = E35EFCDC139BC9B2008D5C6B /* PBXTextBookmark */;
+			E35EFCDE139BC9B2008D5C6B /* PBXTextBookmark */ = E35EFCDE139BC9B2008D5C6B /* PBXTextBookmark */;
+			E35EFD12139BCB8E008D5C6B /* PlistBookmark */ = E35EFD12139BCB8E008D5C6B /* PlistBookmark */;
+		};
+		sourceControlManager = E31A87CA10EC5A5400B496F7 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {783, 515}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 45}";
+		};
+	};
+	32DBCF630370AF2F00C91783 /* iOSScreenShotHelper_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 492}}";
+			sepNavSelRange = "{202, 0}";
+			sepNavVisRange = "{0, 209}";
+		};
+	};
+	8D5B49AC048680CD000E48DA /* iOSScreenShotHelper */ = {
+		activeExec = 0;
+	};
+	E31A87CA10EC5A5400B496F7 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	E31A87CB10EC5A5400B496F7 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	E31A87CE10EC5FAF00B496F7 /* iOSScreenShotHelperLoader.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {783, 515}}";
+			sepNavSelRange = "{358, 0}";
+			sepNavVisRange = "{0, 389}";
+		};
+	};
+	E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {796, 1408}}";
+			sepNavSelRange = "{1192, 0}";
+			sepNavVisRange = "{842, 933}";
+		};
+	};
+	E31A87FF10EC659F00B496F7 /* Executable */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				commandLineArgs = (
+				);
+				displayName = "Executable Runner";
+				environment = {
+				};
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = E31A880010EC659F00B496F7 /* Safari.app */;
+		libgmallocEnabled = 0;
+		name = Executable;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	E31A880010EC659F00B496F7 /* Safari.app */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = wrapper.application;
+		name = Safari.app;
+		path = "Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app";
+		sourceTree = DEVELOPER_DIR;
+	};
+	E35EFC3C139BBF21008D5C6B /* iOSScreenShotHelperLoader.m:15 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */;
+		functionName = "exchangeImpl()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 15;
+		location = iOSScreenShotHelper;
+		modificationTime = 328976820.239587;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	E35EFC78139BC1B5008D5C6B /* runtime.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = runtime.h;
+		path = /Developer_4_3_GM/SDKs/MacOSX10.6.sdk/usr/include/objc/runtime.h;
+		sourceTree = "<absolute>";
+	};
+	E35EFC79139BC2F6008D5C6B /* iOSScreenShotHelperLoader.m:25 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */;
+		functionName = "+install";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 25;
+		location = iOSScreenShotHelper;
+		modificationTime = 328976820.240417;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	E35EFC7D139BC2FD008D5C6B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E35EFC78139BC1B5008D5C6B /* runtime.h */;
+		name = "runtime.h: 133";
+		rLen = 23;
+		rLoc = 4856;
+		rType = 0;
+		vrLen = 2282;
+		vrLoc = 3946;
+	};
+	E35EFCAE139BC4E2008D5C6B /* iOSScreenShotHelperLoader.m:34 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */;
+		functionName = "+_swizzleMethods";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 34;
+		location = iOSScreenShotHelper;
+		modificationTime = 328976820.241312;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	E35EFCDC139BC9B2008D5C6B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32DBCF630370AF2F00C91783 /* iOSScreenShotHelper_Prefix.pch */;
+		name = "iOSScreenShotHelper_Prefix.pch: 8";
+		rLen = 0;
+		rLoc = 202;
+		rType = 0;
+		vrLen = 209;
+		vrLoc = 0;
+	};
+	E35EFCDE139BC9B2008D5C6B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	E35EFD12139BCB8E008D5C6B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/Stewie/Desktop/iOSScreenShotHelper/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+}
