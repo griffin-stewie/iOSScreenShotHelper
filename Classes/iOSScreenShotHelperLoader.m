@@ -7,6 +7,7 @@
 //
 
 #import "iOSScreenShotHelperLoader.h"
+#import "CSPrefferencesManager.h"
 #import <objc/objc-runtime.h>
 
 void exchangeImpl(Class class, SEL original, SEL replaced)
@@ -57,13 +58,22 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
 
 - (NSString *)pathForSavingImageWithFileName:(NSString *)aFileName
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
-    NSLog(@"%s %@", __PRETTY_FUNCTION__, paths);
-    if ([paths count] > 0) {
-        NSString *path = [paths objectAtIndex:0];
-        return [NSString stringWithFormat:@"%@/%@", path, aFileName];
-    }
-    return nil;
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
+//    NSLog(@"%s %@", __PRETTY_FUNCTION__, paths);
+//    if ([paths count] > 0) {
+//        NSString *path = [paths objectAtIndex:0];
+//        return [NSString stringWithFormat:@"%@/%@", path, aFileName];
+//    }
+    
+    NSString *path = [[[CSPrefferencesManager sharedManager] pathForSavingImage] stringByExpandingTildeInPath];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath:path]) {
+        NSError *error = nil;
+		[fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
+	}
+    
+    return [NSString stringWithFormat:@"%@/%@", path, aFileName];
 }
 
 - (void)cs_copyScreen:(id)arg1

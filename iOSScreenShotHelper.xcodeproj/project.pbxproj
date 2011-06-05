@@ -10,6 +10,7 @@
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		E31A87DA10EC603500B496F7 /* iOSScreenShotHelperLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */; };
+		E35EFD4C139BD0DC008D5C6B /* CSPrefferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E35EFD4B139BD0DC008D5C6B /* CSPrefferencesManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSScreenShotHelperLoader.m; sourceTree = "<group>"; };
 		E35EFD3B139BCC83008D5C6B /* DebugUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugUtils.h; path = Other/DebugUtils.h; sourceTree = "<group>"; };
 		E35EFD3C139BCC83008D5C6B /* iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iOS.h; path = Other/iOS.h; sourceTree = "<group>"; };
+		E35EFD4A139BD0DC008D5C6B /* CSPrefferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPrefferencesManager.h; sourceTree = "<group>"; };
+		E35EFD4B139BD0DC008D5C6B /* CSPrefferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPrefferencesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			children = (
 				E31A87CE10EC5FAF00B496F7 /* iOSScreenShotHelperLoader.h */,
 				E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */,
+				E35EFD4A139BD0DC008D5C6B /* CSPrefferencesManager.h */,
+				E35EFD4B139BD0DC008D5C6B /* CSPrefferencesManager.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E31A87DA10EC603500B496F7 /* iOSScreenShotHelperLoader.m in Sources */,
+				E35EFD4C139BD0DC008D5C6B /* CSPrefferencesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
