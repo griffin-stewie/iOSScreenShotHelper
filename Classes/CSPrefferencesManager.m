@@ -10,10 +10,13 @@
 
 NSString * const kScreenShotSaveFilePath = @"ScreenShotSaveFilePath";
 NSString * const kCreateDirectoryIfNotExists = @"CreateDirectoryIfNotExists";
+NSString * const kCropStatusBar = @"CropStatusBar";
+NSString * const kCropNavigationBar = @"CropNavigationBar";
 
 @implementation CSPrefferencesManager
 
 @synthesize prefs;
+@synthesize cropStatusBar;
 
 
 + (NSString *)preferencePath
@@ -65,9 +68,15 @@ NSString * const kCreateDirectoryIfNotExists = @"CreateDirectoryIfNotExists";
 	if (path) {
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		if ([fileManager fileExistsAtPath:path]) {
-			self.prefs = [NSDictionary dictionaryWithContentsOfFile:path];
+			self.prefs = [NSMutableDictionary dictionaryWithContentsOfFile:path];
         }
     }
+}
+
+- (void)save
+{
+    NSString *path = [[self class] preferencePath];
+    [prefs writeToFile:path atomically:YES];
 }
 
 - (id)init
@@ -97,4 +106,30 @@ NSString * const kCreateDirectoryIfNotExists = @"CreateDirectoryIfNotExists";
     return [[self.prefs objectForKey:kCreateDirectoryIfNotExists] boolValue];
 }
 
+- (void)setCropStatusBar:(BOOL)aBool
+{
+    if (cropStatusBar != aBool) {
+        cropStatusBar = aBool;
+        [self.prefs setObject:[NSNumber numberWithBool:aBool] forKey:kCropStatusBar];
+        [self save];
+    }
+}
+
+- (BOOL)cropStatusBar
+{
+    NSNumber *num = [self.prefs objectForKey:kCropStatusBar];
+    return [num boolValue];
+}
+
+- (void)setCropNavigationBar:(BOOL)aBool
+{
+    [self.prefs setObject:[NSNumber numberWithBool:aBool] forKey:kCropNavigationBar];
+    [self save];
+}
+
+- (BOOL)cropNavigationBar
+{
+    NSNumber *num = [self.prefs objectForKey:kCropNavigationBar];
+    return [num boolValue];
+}
 @end

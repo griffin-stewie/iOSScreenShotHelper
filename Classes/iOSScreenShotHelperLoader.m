@@ -9,6 +9,7 @@
 #import "iOSScreenShotHelperLoader.h"
 #import "CSPrefferencesManager.h"
 #import <objc/objc-runtime.h>
+#import <QuartzCore/QuartzCore.h>
 
 void exchangeImpl(Class class, SEL original, SEL replaced)
 {
@@ -26,7 +27,9 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
     NSLog(@"%s %@", __PRETTY_FUNCTION__, @"iOSScreenShotHelperLoader");    
     Class origClass = NSClassFromString(@"MonitorController");
     [origClass _swizzleMethods];
+    [[SSHelper sharedInstance] setupMenu];
 }
+
 @end
 
 
@@ -76,6 +79,31 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
     return [NSString stringWithFormat:@"%@/%@", path, aFileName];
 }
 
+- (void)saveImageData:(NSData *)imageData croppingRect:(CGRect)aRect
+{
+    NSImage *nsImage = [[NSImage alloc] initWithData:imageData];
+    NSSize size = [nsImage size];
+    CIImage *image = [[CIImage alloc] initWithData:imageData];
+    CIImage *croppedImage = [image imageByCroppingToRect:aRect];
+    NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithCIImage:croppedImage];
+    NSDictionary *properties = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES]
+                                                           forKey:NSImageInterlaced];
+    imageData = [bitmapImageRep representationUsingType:NSPNGFileType
+                                             properties:properties];
+    
+    [bitmapImageRep release]; bitmapImageRep = nil;
+    [image release]; image = nil;
+    [nsImage release]; nsImage = nil;
+    
+    
+    NSString *path = [self pathForSavingImageWithFileName:[self filename]];
+    
+    if (path == nil) {
+        return ;
+    }
+    [imageData writeToFile:path atomically:YES];
+}
+
 - (void)cs_copyScreen:(id)arg1
 {
     NSLog(@"%s %@", __PRETTY_FUNCTION__, @"");
@@ -89,13 +117,24 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
         return;
     }
     
-    NSString *path = [self pathForSavingImageWithFileName:[self filename]];
 
-    if (path == nil) {
-        return ;
-    }
+
+    CGRect croppingRect;
+    if ([[CSPrefferencesManager sharedManager] cropStatusBar]) {
+        NSImage *nsImage = [[NSImage alloc] initWithData:imageData];
+        NSSize size = [nsImage size];
+        croppingRect = CGRectMake(0, 0, size.width, size.height - 20);
+        [nsImage release]; nsImage = nil;
+    } 
     
-    [imageData writeToFile:path atomically:YES];
+    if ([[CSPrefferencesManager sharedManager] cropNavigationBar]) {
+        NSImage *nsImage = [[NSImage alloc] initWithData:imageData];
+        NSSize size = [nsImage size];
+        croppingRect = CGRectMake(0, 0, size.width, size.height - 64);
+        [nsImage release]; nsImage = nil;
+    }
+
+    [self saveImageData:imageData croppingRect:croppingRect];
 }
 @end
 

@@ -10,14 +10,20 @@
 
 
 @interface CSPrefferencesManager : NSObject {
-    NSDictionary *prefs;
+    NSMutableDictionary *prefs;
+    BOOL cropStatusBar;
 }
 
-@property (nonatomic, retain) NSDictionary *prefs;
+@property (nonatomic, retain) NSMutableDictionary *prefs;
+@property (assign) BOOL cropStatusBar;
 
 
 + (CSPrefferencesManager *)sharedManager;
 + (NSString *)preferencePath;
 - (NSString *)pathForSavingImage;
 - (BOOL)shouldCreateDirectoryIfNotExists;
+
+
+- (void)setCropNavigationBar:(BOOL)aBool;
+- (BOOL)cropNavigationBar;
 @end

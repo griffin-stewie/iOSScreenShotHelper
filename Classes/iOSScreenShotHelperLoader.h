@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "iOS.h"
+#import "SSHelper.h"
 
 @interface iOSScreenShotHelperLoader : NSObject  
 + (void)install;
