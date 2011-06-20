@@ -21,7 +21,7 @@ NSString * const kCreateDirectoryIfNotExists = @"CreateDirectoryIfNotExists";
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
     NSString* path = nil;
     if ([paths count] > 0) {
-        path  = [[paths objectAtIndex:0] stringByAppendingPathComponent: @"iOSScreenShotHelper/iOSScreenShotHelper.plist"];
+        path  = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"iOSScreenShotHelper/iOSScreenShotHelper.plist"];
     }
 	return path;
 }
