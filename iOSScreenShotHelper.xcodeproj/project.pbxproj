@@ -24,7 +24,6 @@
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		E31A87CE10EC5FAF00B496F7 /* iOSScreenShotHelperLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSScreenShotHelperLoader.h; sourceTree = "<group>"; };
 		E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSScreenShotHelperLoader.m; sourceTree = "<group>"; };
-		E35EFD3B139BCC83008D5C6B /* DebugUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugUtils.h; path = Other/DebugUtils.h; sourceTree = "<group>"; };
 		E35EFD3C139BCC83008D5C6B /* iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iOS.h; path = Other/iOS.h; sourceTree = "<group>"; };
 		E35EFD4A139BD0DC008D5C6B /* CSPrefferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPrefferencesManager.h; sourceTree = "<group>"; };
 		E35EFD4B139BD0DC008D5C6B /* CSPrefferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPrefferencesManager.m; sourceTree = "<group>"; };
@@ -112,7 +111,6 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E35EFD3B139BCC83008D5C6B /* DebugUtils.h */,
 				E35EFD3C139BCC83008D5C6B /* iOS.h */,
 				32DBCF630370AF2F00C91783 /* iOSScreenShotHelper_Prefix.pch */,
 			);
