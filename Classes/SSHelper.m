@@ -28,16 +28,6 @@
     return shared;
 }
 
-
-- (id)init
-{
-    self = [super init];
-    if (self != nil) {
-    }
-    return self;
-}
-
-
 #pragma mark -
 #pragma mark Menu Action
 
@@ -102,6 +92,20 @@
     return item;
 }
 
+- (void)updateMenuItem
+{
+    NSMenuItem *cropTabBarMenuItem = [self cropTabBarMenuItem];
+    NSMenuItem *cropToolBarMenuItem = [self cropToolBarMenuItem];
+    [cropTabBarMenuItem setState:NSOffState];
+    [cropToolBarMenuItem setState:NSOffState];
+    
+    if ([[CSPrefferencesManager sharedManager] cropTabBar]) {
+        [cropTabBarMenuItem setState:NSOnState];
+    } else if ([[CSPrefferencesManager sharedManager] cropToolBar]) {
+        [cropToolBarMenuItem setState:NSOnState];
+    }
+}
+
 #pragma mark -
 #pragma mark Menu Action
 
@@ -121,47 +125,27 @@
 
 - (void)setCropTabBar:(id)sender
 {
-    NSLog(@"%s %@", __PRETTY_FUNCTION__, @"");
-    BOOL flag = NO;
-    if ([sender isKindOfClass:[NSNumber class]]) {
-        flag = [(NSNumber *)sender boolValue];
-    } else {
-        flag = (BOOL)![(NSMenuItem *)sender state];
-    }
-
-    [[CSPrefferencesManager sharedManager] setCropTabBar:flag];   
+    BOOL flag = (BOOL)![(NSMenuItem *)sender state];
+    
+    [[CSPrefferencesManager sharedManager] setCropTabBar:flag];
 
     if (flag) {
-        [[self cropTabBarMenuItem] setState:NSOnState];
-    } else {
-        [[self cropTabBarMenuItem] setState:NSOffState];
+        [[CSPrefferencesManager sharedManager] setCropToolBar:!flag];
     }
 
-    if (flag) {
-        [self setCropToolBar:[NSNumber numberWithBool:!flag]];
-    }
-
+    [self updateMenuItem];
 }
 
 - (void)setCropToolBar:(id)sender
 {
-    NSLog(@"%s %@", __PRETTY_FUNCTION__, @"");
-    BOOL flag = NO;
-    if ([sender isKindOfClass:[NSNumber class]]) {
-        flag = [(NSNumber *)sender boolValue];
-    } else {
-        flag = (BOOL)![(NSMenuItem *)sender state];
-    }    
+    BOOL flag = (BOOL)![(NSMenuItem *)sender state];
     
     [[CSPrefferencesManager sharedManager] setCropToolBar:flag];
-    if (flag) {
-        [[self cropToolBarMenuItem] setState:NSOnState];
-    } else {
-        [[self cropToolBarMenuItem] setState:NSOffState];
-    }
     
     if (flag) {
-        [self setCropTabBar:[NSNumber numberWithBool:!flag]];
+        [[CSPrefferencesManager sharedManager] setCropTabBar:!flag];
     }
+
+    [self updateMenuItem];
 }
 @end
