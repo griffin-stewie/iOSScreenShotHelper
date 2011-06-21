@@ -79,10 +79,19 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
     return [NSString stringWithFormat:@"%@/%@", path, aFileName];
 }
 
+- (void)saveImageData:(NSData *)imageData
+{
+    NSString *path = [self pathForSavingImageWithFileName:[self filename]];
+    
+    if (path == nil) {
+        return ;
+    }
+    
+    [imageData writeToFile:path atomically:YES];    
+}
+
 - (void)saveImageData:(NSData *)imageData croppingRect:(CGRect)aRect
 {
-    NSImage *nsImage = [[NSImage alloc] initWithData:imageData];
-    NSSize size = [nsImage size];
     CIImage *image = [[CIImage alloc] initWithData:imageData];
     CIImage *croppedImage = [image imageByCroppingToRect:aRect];
     NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithCIImage:croppedImage];
@@ -93,15 +102,8 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
     
     [bitmapImageRep release]; bitmapImageRep = nil;
     [image release]; image = nil;
-    [nsImage release]; nsImage = nil;
     
-    
-    NSString *path = [self pathForSavingImageWithFileName:[self filename]];
-    
-    if (path == nil) {
-        return ;
-    }
-    [imageData writeToFile:path atomically:YES];
+    [self saveImageData:imageData];
 }
 
 - (void)cs_copyScreen:(id)arg1
@@ -116,23 +118,26 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
     if (imageData == nil) {
         return;
     }
-    
 
+    NSImage *nsImage = [[[NSImage alloc] initWithData:imageData] autorelease];
+    NSSize size = [nsImage size];
+    CGRect croppingRect = CGRectMake(0, 0, size.width, size.height);
 
-    CGRect croppingRect;
-    if ([[CSPrefferencesManager sharedManager] cropStatusBar]) {
-        NSImage *nsImage = [[NSImage alloc] initWithData:imageData];
-        NSSize size = [nsImage size];
-        croppingRect = CGRectMake(0, 0, size.width, size.height - 20);
-        [nsImage release]; nsImage = nil;
+    if ([[CSPrefferencesManager sharedManager] cropNavigationBar]) {
+        croppingRect.size.height -= 64;
+    } else if ([[CSPrefferencesManager sharedManager] cropStatusBar]) {
+        croppingRect.size.height -= 20;
     } 
     
-    if ([[CSPrefferencesManager sharedManager] cropNavigationBar]) {
-        NSImage *nsImage = [[NSImage alloc] initWithData:imageData];
-        NSSize size = [nsImage size];
-        croppingRect = CGRectMake(0, 0, size.width, size.height - 64);
-        [nsImage release]; nsImage = nil;
-    }
+    if ([[CSPrefferencesManager sharedManager] cropTabBar]) {
+        CGFloat barHeight = 49;
+        croppingRect.origin.y = barHeight;
+        croppingRect.size.height -= barHeight;
+    } else if ([[CSPrefferencesManager sharedManager] cropToolBar]) {
+        CGFloat barHeight = 44;
+        croppingRect.origin.y = barHeight;
+        croppingRect.size.height -= barHeight;
+    } 
 
     [self saveImageData:imageData croppingRect:croppingRect];
 }

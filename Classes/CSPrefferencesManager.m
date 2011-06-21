@@ -12,12 +12,12 @@ NSString * const kScreenShotSaveFilePath = @"ScreenShotSaveFilePath";
 NSString * const kCreateDirectoryIfNotExists = @"CreateDirectoryIfNotExists";
 NSString * const kCropStatusBar = @"CropStatusBar";
 NSString * const kCropNavigationBar = @"CropNavigationBar";
+NSString * const kCropTabBar = @"CropTabBar";
+NSString * const kCropToolBar = @"CropToolBar";
 
 @implementation CSPrefferencesManager
 
 @synthesize prefs;
-@synthesize cropStatusBar;
-
 
 + (NSString *)preferencePath
 {
@@ -106,13 +106,12 @@ NSString * const kCropNavigationBar = @"CropNavigationBar";
     return [[self.prefs objectForKey:kCreateDirectoryIfNotExists] boolValue];
 }
 
+
+
 - (void)setCropStatusBar:(BOOL)aBool
 {
-    if (cropStatusBar != aBool) {
-        cropStatusBar = aBool;
-        [self.prefs setObject:[NSNumber numberWithBool:aBool] forKey:kCropStatusBar];
-        [self save];
-    }
+    [self.prefs setObject:[NSNumber numberWithBool:aBool] forKey:kCropStatusBar];
+    [self save];
 }
 
 - (BOOL)cropStatusBar
@@ -120,6 +119,7 @@ NSString * const kCropNavigationBar = @"CropNavigationBar";
     NSNumber *num = [self.prefs objectForKey:kCropStatusBar];
     return [num boolValue];
 }
+
 
 - (void)setCropNavigationBar:(BOOL)aBool
 {
@@ -130,6 +130,30 @@ NSString * const kCropNavigationBar = @"CropNavigationBar";
 - (BOOL)cropNavigationBar
 {
     NSNumber *num = [self.prefs objectForKey:kCropNavigationBar];
+    return [num boolValue];
+}
+
+- (void)setCropTabBar:(BOOL)aBool
+{
+    [self.prefs setObject:[NSNumber numberWithBool:aBool] forKey:kCropTabBar];
+    [self save];
+}
+
+- (BOOL)cropTabBar
+{
+    NSNumber *num = [self.prefs objectForKey:kCropTabBar];
+    return [num boolValue];
+}
+
+- (void)setCropToolBar:(BOOL)aBool
+{
+    [self.prefs setObject:[NSNumber numberWithBool:aBool] forKey:kCropToolBar];
+    [self save];    
+}
+
+- (BOOL)cropToolBar
+{
+    NSNumber *num = [self.prefs objectForKey:kCropToolBar];
     return [num boolValue];
 }
 @end
