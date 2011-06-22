@@ -106,6 +106,18 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
     [self saveImageData:imageData];
 }
 
+- (CGFloat)scaleFromSize:(NSSize)size
+{
+    NSLog(@"%s %@", __PRETTY_FUNCTION__, NSStringFromSize(size));
+    CGFloat scale = 1.0f;
+    
+    if (size.height == (480 * 2) && size.width == (320 * 2)) {
+        scale = 2.0f;
+    }
+    
+    return scale;
+}
+
 - (void)cs_copyScreen:(id)arg1
 {
     NSLog(@"%s %@", __PRETTY_FUNCTION__, @"");
@@ -121,24 +133,27 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
 
     NSImage *nsImage = [[[NSImage alloc] initWithData:imageData] autorelease];
     NSSize size = [nsImage size];
+    CGFloat scale = [self scaleFromSize:size];
     CGRect croppingRect = CGRectMake(0, 0, size.width, size.height);
 
     if ([[CSPrefferencesManager sharedManager] cropNavigationBar]) {
-        croppingRect.size.height -= 64;
+        croppingRect.size.height -= ((20 * scale) + (44 * scale));
     } else if ([[CSPrefferencesManager sharedManager] cropStatusBar]) {
-        croppingRect.size.height -= 20;
+        croppingRect.size.height -= (20 * scale);
     } 
     
     if ([[CSPrefferencesManager sharedManager] cropTabBar]) {
         CGFloat barHeight = 49;
-        croppingRect.origin.y = barHeight;
-        croppingRect.size.height -= barHeight;
+        croppingRect.origin.y = (barHeight * scale);
+        croppingRect.size.height -= (barHeight * scale);
     } else if ([[CSPrefferencesManager sharedManager] cropToolBar]) {
         CGFloat barHeight = 44;
-        croppingRect.origin.y = barHeight;
-        croppingRect.size.height -= barHeight;
+        croppingRect.origin.y = (barHeight * scale);
+        croppingRect.size.height -= (barHeight * scale);
     } 
 
+    NSLog(@"%s %@", __PRETTY_FUNCTION__, NSStringFromRect(NSRectFromCGRect(croppingRect)));
+    
     [self saveImageData:imageData croppingRect:croppingRect];
 }
 @end
