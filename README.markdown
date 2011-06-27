@@ -25,7 +25,8 @@ iOS Screen Shot Helper is SIMBL plugin that gives you taking screen shot and sav
 
 ## Preferences ##
 
-Currently there is no preference user interface.
-You can change directory of saving screen shots following command with terminal.app.
+Currently there is no preference user interface.    
+You can change directory of saving screen shots following command with terminal.app and restart iOS simulator.
+
 
 > defaults write ~/Library/Application\ Support/iOSScreenShotHelper/iOSScreenShotHelper ScreenShotSaveFilePath "PATH FOR SCREEN SHOTS"
