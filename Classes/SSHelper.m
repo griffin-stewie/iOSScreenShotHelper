@@ -29,7 +29,7 @@
 }
 
 #pragma mark -
-#pragma mark Menu Action
+#pragma mark Menu
 
 - (void)setupMenu
 {

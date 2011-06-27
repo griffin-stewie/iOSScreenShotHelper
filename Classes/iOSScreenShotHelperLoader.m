@@ -61,13 +61,6 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
 
 - (NSString *)pathForSavingImageWithFileName:(NSString *)aFileName
 {
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
-//    NSLog(@"%s %@", __PRETTY_FUNCTION__, paths);
-//    if ([paths count] > 0) {
-//        NSString *path = [paths objectAtIndex:0];
-//        return [NSString stringWithFormat:@"%@/%@", path, aFileName];
-//    }
-    
     NSString *path = [[[CSPrefferencesManager sharedManager] pathForSavingImage] stringByExpandingTildeInPath];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];

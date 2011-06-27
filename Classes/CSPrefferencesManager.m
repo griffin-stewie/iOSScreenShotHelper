@@ -106,8 +106,6 @@ NSString * const kCropToolBar = @"CropToolBar";
     return [[self.prefs objectForKey:kCreateDirectoryIfNotExists] boolValue];
 }
 
-
-
 - (void)setCropStatusBar:(BOOL)aBool
 {
     [self.prefs setObject:[NSNumber numberWithBool:aBool] forKey:kCropStatusBar];
