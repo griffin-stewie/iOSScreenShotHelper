@@ -22,7 +22,7 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
 }
 
 @implementation iOSScreenShotHelperLoader
-+ (void)install
++ (void)load
 {
     NSLog(@"%s %@", __PRETTY_FUNCTION__, @"iOSScreenShotHelperLoader");    
     Class origClass = NSClassFromString(@"MonitorController");

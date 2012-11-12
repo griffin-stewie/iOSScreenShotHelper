@@ -11,7 +11,7 @@
 #import "SSHelper.h"
 
 @interface iOSScreenShotHelperLoader : NSObject  
-+ (void)install;
+
 @end
 
 @interface MonitorController (SwizzlingAdditions)

@@ -4,6 +4,7 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+    #import "iOS.h"
 #endif
 
 #ifdef DEBUG
