@@ -14,7 +14,7 @@
 
 @end
 
-@interface MonitorController (SwizzlingAdditions)
+@interface NSObject (SwizzlingAdditions)
 - (void)cs_copyScreen:(id)arg1;
 + (void)_swizzleMethods;
 @end

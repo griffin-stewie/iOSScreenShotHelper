@@ -33,7 +33,7 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
 @end
 
 
-@implementation MonitorController (SwizzlingAdditions)
+@implementation NSObject (SwizzlingAdditions)
 
 + (void)_swizzleMethods
 {
@@ -104,7 +104,9 @@ void exchangeImpl(Class class, SEL original, SEL replaced)
     NSLog(@"%s %@", __PRETTY_FUNCTION__, NSStringFromSize(size));
     CGFloat scale = 1.0f;
     
-    if (size.height == (480 * 2) && size.width == (320 * 2)) {
+    CGFloat longerEdge = MAX(size.height, size.width);
+    
+    if (longerEdge == (480 * 2) || longerEdge == 1136) {
         scale = 2.0f;
     }
     

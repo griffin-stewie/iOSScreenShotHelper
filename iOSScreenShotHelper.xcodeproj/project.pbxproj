@@ -3,218 +3,203 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
-		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		E31A87DA10EC603500B496F7 /* iOSScreenShotHelperLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */; };
-		E35EFD4C139BD0DC008D5C6B /* CSPrefferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E35EFD4B139BD0DC008D5C6B /* CSPrefferencesManager.m */; };
-		E374BC7C13AF8473006A1A18 /* SSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E374BC7B13AF8473006A1A18 /* SSHelper.m */; };
-		E374BCDE13AF8A61006A1A18 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E374BCDD13AF8A61006A1A18 /* QuartzCore.framework */; };
+		E3EBE3CB16513E7A0081A4A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EBE3CA16513E7A0081A4A6 /* Cocoa.framework */; };
+		E3EBE3D516513E7A0081A4A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3EBE3D316513E7A0081A4A6 /* InfoPlist.strings */; };
+		E3EBE3F016513EAF0081A4A6 /* CSPrefferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBE3EB16513EAF0081A4A6 /* CSPrefferencesManager.m */; };
+		E3EBE3F116513EAF0081A4A6 /* iOSScreenShotHelperLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBE3ED16513EAF0081A4A6 /* iOSScreenShotHelperLoader.m */; };
+		E3EBE3F216513EAF0081A4A6 /* SSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBE3EF16513EAF0081A4A6 /* SSHelper.m */; };
+		E3EBE3F716513F9F0081A4A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EBE3F516513F5E0081A4A6 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		32DBCF630370AF2F00C91783 /* iOSScreenShotHelper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSScreenShotHelper_Prefix.pch; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* iOSScreenShotHelper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSScreenShotHelper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E31A87CE10EC5FAF00B496F7 /* iOSScreenShotHelperLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSScreenShotHelperLoader.h; sourceTree = "<group>"; };
-		E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSScreenShotHelperLoader.m; sourceTree = "<group>"; };
-		E35EFD3C139BCC83008D5C6B /* iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iOS.h; path = Other/iOS.h; sourceTree = "<group>"; };
-		E35EFD4A139BD0DC008D5C6B /* CSPrefferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPrefferencesManager.h; sourceTree = "<group>"; };
-		E35EFD4B139BD0DC008D5C6B /* CSPrefferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPrefferencesManager.m; sourceTree = "<group>"; };
-		E374BC7A13AF8473006A1A18 /* SSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHelper.h; sourceTree = "<group>"; };
-		E374BC7B13AF8473006A1A18 /* SSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHelper.m; sourceTree = "<group>"; };
-		E374BCDD13AF8A61006A1A18 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E3EBE3C716513E7A0081A4A6 /* iOSScreenShotHelper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSScreenShotHelper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3EBE3CA16513E7A0081A4A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E3EBE3CD16513E7A0081A4A6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E3EBE3CE16513E7A0081A4A6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E3EBE3CF16513E7A0081A4A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E3EBE3D216513E7A0081A4A6 /* iOSScreenShotHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSScreenShotHelper-Info.plist"; sourceTree = "<group>"; };
+		E3EBE3D416513E7A0081A4A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E3EBE3D616513E7A0081A4A6 /* iOSScreenShotHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSScreenShotHelper-Prefix.pch"; sourceTree = "<group>"; };
+		E3EBE3EA16513EAF0081A4A6 /* CSPrefferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPrefferencesManager.h; sourceTree = "<group>"; };
+		E3EBE3EB16513EAF0081A4A6 /* CSPrefferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPrefferencesManager.m; sourceTree = "<group>"; };
+		E3EBE3EC16513EAF0081A4A6 /* iOSScreenShotHelperLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSScreenShotHelperLoader.h; sourceTree = "<group>"; };
+		E3EBE3ED16513EAF0081A4A6 /* iOSScreenShotHelperLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSScreenShotHelperLoader.m; sourceTree = "<group>"; };
+		E3EBE3EE16513EAF0081A4A6 /* SSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHelper.h; sourceTree = "<group>"; };
+		E3EBE3EF16513EAF0081A4A6 /* SSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHelper.m; sourceTree = "<group>"; };
+		E3EBE3F416513EDC0081A4A6 /* iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS.h; sourceTree = "<group>"; };
+		E3EBE3F516513F5E0081A4A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+		E3EBE3C416513E7A0081A4A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				E374BCDE13AF8A61006A1A18 /* QuartzCore.framework in Frameworks */,
+				E3EBE3CB16513E7A0081A4A6 /* Cocoa.framework in Frameworks */,
+				E3EBE3F716513F9F0081A4A6 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		089C166AFE841209C02AAC07 /* SafariSIMBLPluginTemplate */ = {
+		E3EBE3BC16513E7A0081A4A6 = {
 			isa = PBXGroup;
 			children = (
-				08FB77AFFE84173DC02AAC07 /* Classes */,
-				32C88E010371C26100C91783 /* Other Sources */,
-				089C167CFE841241C02AAC07 /* Resources */,
-				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
-				19C28FB8FE9D52D311CA2CBB /* Products */,
+				E3EBE3D016513E7A0081A4A6 /* iOSScreenShotHelper */,
+				E3EBE3C916513E7A0081A4A6 /* Frameworks */,
+				E3EBE3C816513E7A0081A4A6 /* Products */,
 			);
-			name = SafariSIMBLPluginTemplate;
 			sourceTree = "<group>";
 		};
-		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+		E3EBE3C816513E7A0081A4A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
-				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
-			);
-			name = "Frameworks and Libraries";
-			sourceTree = "<group>";
-		};
-		089C167CFE841241C02AAC07 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8D5B49B7048680CD000E48DA /* Info.plist */,
-				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		08FB77AFFE84173DC02AAC07 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E31A87CE10EC5FAF00B496F7 /* iOSScreenShotHelperLoader.h */,
-				E31A87D910EC603500B496F7 /* iOSScreenShotHelperLoader.m */,
-				E35EFD4A139BD0DC008D5C6B /* CSPrefferencesManager.h */,
-				E35EFD4B139BD0DC008D5C6B /* CSPrefferencesManager.m */,
-				E374BC7A13AF8473006A1A18 /* SSHelper.h */,
-				E374BC7B13AF8473006A1A18 /* SSHelper.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				089C167FFE841241C02AAC07 /* AppKit.framework */,
-				089C1672FE841209C02AAC07 /* Foundation.framework */,
-				E374BCDD13AF8A61006A1A18 /* QuartzCore.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		19C28FB8FE9D52D311CA2CBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8D5B49B6048680CD000E48DA /* iOSScreenShotHelper.bundle */,
+				E3EBE3C716513E7A0081A4A6 /* iOSScreenShotHelper.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		32C88E010371C26100C91783 /* Other Sources */ = {
+		E3EBE3C916513E7A0081A4A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E35EFD3C139BCC83008D5C6B /* iOS.h */,
-				32DBCF630370AF2F00C91783 /* iOSScreenShotHelper_Prefix.pch */,
+				E3EBE3CA16513E7A0081A4A6 /* Cocoa.framework */,
+				E3EBE3CC16513E7A0081A4A6 /* Other Frameworks */,
 			);
-			name = "Other Sources";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3EBE3CC16513E7A0081A4A6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3EBE3F516513F5E0081A4A6 /* QuartzCore.framework */,
+				E3EBE3CD16513E7A0081A4A6 /* AppKit.framework */,
+				E3EBE3CE16513E7A0081A4A6 /* CoreData.framework */,
+				E3EBE3CF16513E7A0081A4A6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E3EBE3D016513E7A0081A4A6 /* iOSScreenShotHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E3EBE3F316513EDC0081A4A6 /* Other */,
+				E3EBE3E916513EAF0081A4A6 /* Classes */,
+				E3EBE3D116513E7A0081A4A6 /* Supporting Files */,
+			);
+			path = iOSScreenShotHelper;
+			sourceTree = "<group>";
+		};
+		E3EBE3D116513E7A0081A4A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3EBE3D216513E7A0081A4A6 /* iOSScreenShotHelper-Info.plist */,
+				E3EBE3D316513E7A0081A4A6 /* InfoPlist.strings */,
+				E3EBE3D616513E7A0081A4A6 /* iOSScreenShotHelper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3EBE3E916513EAF0081A4A6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E3EBE3EA16513EAF0081A4A6 /* CSPrefferencesManager.h */,
+				E3EBE3EB16513EAF0081A4A6 /* CSPrefferencesManager.m */,
+				E3EBE3EC16513EAF0081A4A6 /* iOSScreenShotHelperLoader.h */,
+				E3EBE3ED16513EAF0081A4A6 /* iOSScreenShotHelperLoader.m */,
+				E3EBE3EE16513EAF0081A4A6 /* SSHelper.h */,
+				E3EBE3EF16513EAF0081A4A6 /* SSHelper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E3EBE3F316513EDC0081A4A6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E3EBE3F416513EDC0081A4A6 /* iOS.h */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D5B49AC048680CD000E48DA /* iOSScreenShotHelper */ = {
+		E3EBE3C616513E7A0081A4A6 /* iOSScreenShotHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "iOSScreenShotHelper" */;
+			buildConfigurationList = E3EBE3D916513E7A0081A4A6 /* Build configuration list for PBXNativeTarget "iOSScreenShotHelper" */;
 			buildPhases = (
-				8D5B49AF048680CD000E48DA /* Resources */,
-				8D5B49B1048680CD000E48DA /* Sources */,
-				8D5B49B3048680CD000E48DA /* Frameworks */,
-				E31A880910EC65C100B496F7 /* ShellScript */,
+				E3EBE3C316513E7A0081A4A6 /* Sources */,
+				E3EBE3C416513E7A0081A4A6 /* Frameworks */,
+				E3EBE3C516513E7A0081A4A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = iOSScreenShotHelper;
-			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = SafariSIMBLPluginTemplate;
-			productReference = 8D5B49B6048680CD000E48DA /* iOSScreenShotHelper.bundle */;
+			productName = iOSScreenShotHelper;
+			productReference = E3EBE3C716513E7A0081A4A6 /* iOSScreenShotHelper.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		089C1669FE841209C02AAC07 /* Project object */ = {
+		E3EBE3BE16513E7A0081A4A6 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "iOSScreenShotHelper" */;
-			compatibilityVersion = "Xcode 3.1";
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Tatsuya Zushi";
+			};
+			buildConfigurationList = E3EBE3C116513E7A0081A4A6 /* Build configuration list for PBXProject "iOSScreenShotHelper" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
 			);
-			mainGroup = 089C166AFE841209C02AAC07 /* SafariSIMBLPluginTemplate */;
+			mainGroup = E3EBE3BC16513E7A0081A4A6;
+			productRefGroup = E3EBE3C816513E7A0081A4A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D5B49AC048680CD000E48DA /* iOSScreenShotHelper */,
+				E3EBE3C616513E7A0081A4A6 /* iOSScreenShotHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8D5B49AF048680CD000E48DA /* Resources */ = {
+		E3EBE3C516513E7A0081A4A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				E3EBE3D516513E7A0081A4A6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		E31A880910EC65C100B496F7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# clean up any previous products/symbolic links in the SIMBL Plugins folder\nif [ -a \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\" ]; then\n  rm -Rf \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\"\nfi\n\n# Depending on the build configuration, either copy or link to the most recent product\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n  # if we're debugging, add a symbolic link to the plug-in\n  ln -sf \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \\\n    \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\"\nelif [ \"${CONFIGURATION}\" == \"Release\" ]; then\n  # if we're compiling for release, just copy the plugin to the SIMBL Plugins folder\n  cp -Rfv \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \\\n    \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		8D5B49B1048680CD000E48DA /* Sources */ = {
+		E3EBE3C316513E7A0081A4A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E31A87DA10EC603500B496F7 /* iOSScreenShotHelperLoader.m in Sources */,
-				E35EFD4C139BD0DC008D5C6B /* CSPrefferencesManager.m in Sources */,
-				E374BC7C13AF8473006A1A18 /* SSHelper.m in Sources */,
+				E3EBE3F016513EAF0081A4A6 /* CSPrefferencesManager.m in Sources */,
+				E3EBE3F116513EAF0081A4A6 /* iOSScreenShotHelperLoader.m in Sources */,
+				E3EBE3F216513EAF0081A4A6 /* SSHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+		E3EBE3D316513E7A0081A4A6 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C167EFE841241C02AAC07 /* English */,
+				E3EBE3D416513E7A0081A4A6 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -222,95 +207,104 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1DEB913B08733D840010E9CD /* Debug */ = {
+		E3EBE3D716513E7A0081A4A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iOSScreenShotHelper_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				PRODUCT_NAME = iOSScreenShotHelper;
-				VALID_ARCHS = "i386 x86_64";
-				WRAPPER_EXTENSION = bundle;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		1DEB913C08733D840010E9CD /* Release */ = {
+		E3EBE3D816513E7A0081A4A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iOSScreenShotHelper_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				PRODUCT_NAME = iOSScreenShotHelper;
-				VALID_ARCHS = "i386 x86_64";
-				WRAPPER_EXTENSION = bundle;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		1DEB913F08733D840010E9CD /* Debug */ = {
+		E3EBE3DA16513E7A0081A4A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSScreenShotHelper/iOSScreenShotHelper-Prefix.pch";
+				INFOPLIST_FILE = "iOSScreenShotHelper/iOSScreenShotHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
-		1DEB914008733D840010E9CD /* Release */ = {
+		E3EBE3DB16513E7A0081A4A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = NO;
-				PREBINDING = NO;
-				SDKROOT = macosx;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSScreenShotHelper/iOSScreenShotHelper-Prefix.pch";
+				INFOPLIST_FILE = "iOSScreenShotHelper/iOSScreenShotHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "iOSScreenShotHelper" */ = {
+		E3EBE3C116513E7A0081A4A6 /* Build configuration list for PBXProject "iOSScreenShotHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB913B08733D840010E9CD /* Debug */,
-				1DEB913C08733D840010E9CD /* Release */,
+				E3EBE3D716513E7A0081A4A6 /* Debug */,
+				E3EBE3D816513E7A0081A4A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "iOSScreenShotHelper" */ = {
+		E3EBE3D916513E7A0081A4A6 /* Build configuration list for PBXNativeTarget "iOSScreenShotHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB913F08733D840010E9CD /* Debug */,
-				1DEB914008733D840010E9CD /* Release */,
+				E3EBE3DA16513E7A0081A4A6 /* Debug */,
+				E3EBE3DB16513E7A0081A4A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+	rootObject = E3EBE3BE16513E7A0081A4A6 /* Project object */;
 }

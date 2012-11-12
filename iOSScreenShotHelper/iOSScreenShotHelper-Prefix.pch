@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'SafariSIMBLPluginTemplate' target in the 'SafariSIMBLPluginTemplate' project.
+// Prefix header for all source files of the 'iOSScreenShotHelper' target in the 'iOSScreenShotHelper' project
 //
 
 #ifdef __OBJC__
